@@ -10,6 +10,12 @@ import FloatingEffects from './components/FloatingEffects.vue'
 
 const magicWandClicked = ref(false)
 
+// Función para generar rutas correctas para GitHub Pages
+const getImagePath = (path) => {
+  const base = import.meta.env.BASE_URL || '/'
+  return `${base}${path.startsWith('/') ? path.slice(1) : path}`
+}
+
 // Timeline principal de GSAP
 let masterTimeline = null
 
@@ -224,7 +230,7 @@ const magicWandClick = () => {
                 <span>💖</span><span>🙈</span><span>💕</span><span>🎀</span><span>💗</span>
               </div>
               <div class="kitty-final-decoration">
-                <img src="/images/hello-kitty-birthday.png" alt="Birthday Hello Kitty" class="big-kitty-svg" />
+                <img :src="getImagePath('images/hello-kitty-birthday.png')" alt="Birthday Hello Kitty" class="big-kitty-svg" />
                 <div class="kitty-accessories">
                   <span>🎀</span>
                   <span>👑</span>

@@ -83,45 +83,51 @@ import { gsap } from 'gsap'
 
 const currentPhotoIndex = ref(0)
 
+// Función para generar rutas correctas para GitHub Pages
+const getImagePath = (path) => {
+  const base = import.meta.env.BASE_URL || '/'
+  return `${base}${path.startsWith('/') ? path.slice(1) : path}`
+}
+
 // Array de fotos reales con descripciones
 const photos = ref([
   {
-    src: '/images/fotos/foto_nosotros_en_la_universidad.jpg',
+    src: getImagePath('images/fotos/foto_nosotros_en_la_universidad.jpg'),
     title: 'Nosotros en la universidad',
     description: 'Donde todo comenzó, nuestros primeros momentos juntos 💖'
   },
   {
-    src: '/images/fotos/foto_juntitos.jpg', 
+    src: getImagePath('images/fotos/foto_juntitos.jpg'), 
     title: 'Momentos tiernos',
     description: 'Juntitos y felices, así es como me gusta estar contigo 💕'
   },
   {
-    src: '/images/fotos/foto_juntos_almorzando.jpg',
+    src: getImagePath('images/fotos/foto_juntos_almorzando.jpg'),
     title: 'Compartiendo momentos',
     description: 'Un almuerzo contigo es especial mi princesa 🌹'
   },
   {
-    src: '/images/fotos/foto_ella_chula_titulandose.jpg',
+    src: getImagePath('images/fotos/foto_ella_chula_titulandose.jpg'),
     title: 'Mi graduada hermosa',
     description: 'El día que te titulaste, tan orgulloso de ti mi reina 👑'
   },
   {
-    src: '/images/fotos/foto_ella_chula.jpg',
+    src: getImagePath('images/fotos/foto_ella_chula.jpg'),
     title: 'Mi chica hermosa',
     description: 'Siempre tan bella, mi chica perfecta 💎'
   },
   {
-    src: '/images/fotos/foto_ella_chula_con_sus_rosas.jpg',
+    src: getImagePath('images/fotos/foto_ella_chula_con_sus_rosas.jpg'),
     title: 'Mi preciosa con rosas',
     description: 'Tan hermosa con tus rosas, pero tú brillas más 🌹'
   },
   {
-    src: '/images/fotos/foto_juntos_con_sus_rosas.jpg',
+    src: getImagePath('images/fotos/foto_juntos_con_sus_rosas.jpg'),
     title: 'Beshito de nosotros',
     description: 'Juntos con tus rosas bellas 💖🌹'
   },
   {
-    src: '/images/fotos/fotos_juntos_elegantes.jpg',
+    src: getImagePath('images/fotos/fotos_juntos_elegantes.jpg'),
     title: 'Elegantes como siempre',
     description: 'Tan elegantes juntos, sacando nuestros pasos prohibidos :3 💎👑'
   }
