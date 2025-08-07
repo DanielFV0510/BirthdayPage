@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Test Hello Kitty Images</title>
+    <style>
+        body {
+            background: linear-gradient(135deg, #ff69b4, #ffc0cb, #ff1493);
+            padding: 20px;
+            font-family: Arial, sans-serif;
+        }
+        .test-container {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 20px;
+            justify-content: center;
+            align-items: center;
+        }
+        .test-image {
+            width: 100px;
+            height: 100px;
+            border: 3px solid white;
+            border-radius: 15px;
+            background: white;
+            padding: 10px;
+            box-shadow: 0 5px 15px rgba(0,0,0,0.2);
+        }
+        h1 {
+            text-align: center;
+            color: white;
+            text-shadow: 2px 2px 4px rgba(0,0,0,0.3);
+        }
+        .image-label {
+            text-align: center;
+            color: white;
+            font-weight: bold;
+            margin-top: 10px;
+            text-shadow: 1px 1px 2px rgba(0,0,0,0.5);
+        }
+    </style>
+</head>
+<body>
+    <h1>🐱 Test de Imágenes Hello Kitty 🐱</h1>
+    
+    <div class="test-container">
+        <div>
+            <img src="/images/hello-kitty-1.png" alt="Hello Kitty 1" class="test-image" />
+            <div class="image-label">hello-kitty-1.png</div>
+        </div>
+        
+        <div>
+            <img src="/images/hello-kitty-2.jpg" alt="Hello Kitty 2" class="test-image" />
+            <div class="image-label">hello-kitty-2.jpg</div>
+        </div>
+        
+        <div>
+            <img src="/images/hello-kitty-birthday.png" alt="Hello Kitty Birthday" class="test-image" />
+            <div class="image-label">hello-kitty-birthday.png</div>
+        </div>
+        
+        <div>
+            <img src="/images/hello-kitty-small.png" alt="Hello Kitty Small" class="test-image" />
+            <div class="image-label">hello-kitty-small.png</div>
+        </div>
+    </div>
+
+    <div style="text-align: center; margin-top: 40px;">
+        <h2 style="color: white;">Si ves las imágenes arriba, funcionan correctamente 🎉</h2>
+        <p style="color: white;">Si no las ves, hay un problema con las rutas o el contenido de los archivos SVG</p>
+    </div>
+</body>
+</html>
